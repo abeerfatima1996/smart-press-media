@@ -33,8 +33,8 @@ const Home = () => {
          {/* Hero Section End */}
 
         {/* Paragraph */}
-            <div className='flex justify-center items-center mt-72 text-center px-28'>
-                <p className='text-6xl   md:mx-0'>
+            <div className='flex justify-center items-center  text-center px-28 mt-24'>
+                <p className='text-4xl   md:mx-0'>
                 Lorem ipsum dolor sit amet consectetur. Elit enim eu rhoncus ultricies. 
                 Morbi felis magna purus sit nullam eu dictumst convallis nibh.
                 In habitant quis auctor in augue nulla sed vestibulum quam. Dolor volutpat ac.
@@ -46,7 +46,7 @@ const Home = () => {
                 <img src={bookCover} alt="bookCover" className="h-[800px] " />
                 {/* Right: Text */}
                 <div className="max-w-[500px] flex flex-col md:items-start  md:text-left">
-                    <h2 className="text-7xl ">Book Title Goes Here</h2>
+                    <h2 className="text-5xl ">Book Title Goes Here</h2>
                     <p className="mt-10 font-noto text-lg ">
                     Lorem ipsum dolor sit amet consectetur. Lacinia etiam elementum
                     senectus ac integer. Elit nisi platea aliquet viverra.
@@ -58,7 +58,7 @@ const Home = () => {
             </div>
         {/*More Books  */}
             <div className='flex flex-col justify-center items-center mt-10 text-center'>
-            <h2 className='text-6xl'>More Books to Read</h2>
+            <h2 className='text-5xl'>More Books to Read</h2>
                 <p className='mt-10 text-lg max-w-[600px]  md:mx-0'>
                 Lorem ipsum dolor sit amet consectetur. Lacinia etiam elementum senectus ac integer.
                 Elit nisi platea aliquet viverra.
@@ -68,9 +68,9 @@ const Home = () => {
             <Carousel/>
 
         {/* Explore Start */}
-            <div className='flex flex-col justify-center items-center text-center mt-64'>
-                <h3 className='text-9xl max-w-[600px]'>Eplore  Calyn Smart</h3>
-                <img src={explore} alt="explore" className='h-96  mt-28'/>
+            <div className='flex flex-col justify-center items-center text-center mt-28'>
+                <h3 className='text-7xl  max-w-[350px]'>Eplore  Calyn Smart</h3>
+                <img src={explore} alt="explore" className='h-96  mt-14'/>
             </div>
         {/* Explore End */}
 

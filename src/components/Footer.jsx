@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <>
-        <div className='footer mt-40 container mx-auto '>
+        <div className='footer mt-40 container mx-auto px-10 '>
             {/* Heading */}
             <div className='flex flex-col justify-center items-center text-center'>
                 <h2 className='text-9xl'>Want To Get In <br/>Touch?</h2>

@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <>
      {/* Top bar */}
-      <div className="container mx-auto grid grid-cols-3 items-center py-10">
+      <div className="container mx-auto grid grid-cols-3 items-center py-10 px-5">
         {/* Left: Menu / Hamburger */}
         <div className="flex items-center gap-8">
           <ul className="hidden lg:flex gap-14 text-xl">
