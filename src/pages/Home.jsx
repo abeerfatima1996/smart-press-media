@@ -14,11 +14,11 @@ const Home = () => {
         <Navbar/>
 
          {/* Hero Section Start */}
-              <div className=" flex flex-col lg:flex-row items-center justify-center py-4 px-24 mt-16 ">
+              <div className=" hidden lg:flex items-center justify-center py-4 px-24 mt-14 ">
                       {/* Left Section */}
                       <div className="text-center md:text-left">
                         <h1 className="text-[200px] leading-none ">Calyn</h1>
-                        <p className="text-lg font-noto tracking-wide mt-65  max-w-[400px] mx-auto md:mx-0">
+                        <p className="text-lg font-noto tracking-wide  max-w-[400px] mx-auto md:mx-0">
                           Lorem ipsum dolor sit amet consectetur. Lacinia etiam elementum 
                           senectus ac integer. Elit nisi platea aliquet viverra.
                         </p>
@@ -31,6 +31,27 @@ const Home = () => {
                       <h1 className="text-[200px] leading-none">Smart</h1>
               </div>
          {/* Hero Section End */}
+
+         {/* Mobile Hero Section Start */}
+              <div className="  lg:hidden flex flex-col items-center justify-center py-4 px-24 mt-14 ">
+                      {/* Left Section */}
+                      <div className="text-center md:text-left">
+                        <h1 className="text-[200px] leading-none mb-12 ">Calyn</h1>
+                      </div>
+        
+                      {/* Image */}
+                      <img src={banner} alt="Banner" className="h-[500px] w-auto" />
+        
+                      {/* Right Section */}
+                      <h1 className="text-[200px] leading-none">Smart</h1>
+                      <p className="text-lg text-center font-noto tracking-wide  max-w-[400px] mx-auto md:mx-0">
+                          Lorem ipsum dolor sit amet consectetur. Lacinia etiam elementum 
+                          senectus ac integer. Elit nisi platea aliquet viverra.
+                        </p>
+              </div>
+         {/*Mobile Hero Section End */}
+
+
 
         {/* Paragraph */}
             <div className='flex justify-center items-center  text-center px-28 mt-24'>
