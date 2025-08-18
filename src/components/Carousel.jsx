@@ -45,7 +45,7 @@ const Carousel = () => {
                 >
                     <img src={b.image} alt={b.title} className="h-80" />
                     <h3 className="text-4xl">{b.title}</h3>
-                    <p className="text-md  mt-7">{b.description}</p>
+                    <p className="text-md  mt-7 font-noto">{b.description}</p>
                     <div className="mt-7">
                         <Button label="Purchase Now" />
                     </div>

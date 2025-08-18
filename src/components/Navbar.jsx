@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gray-900 text-white py-4">
+        <div className="conatainer mx-auto lg:hidden  text-white py-4">
           <ul className="flex flex-col items-center gap-4 text-lg">
             <li className="cursor-pointer">Home</li>
             <li className="cursor-pointer">Author</li>
