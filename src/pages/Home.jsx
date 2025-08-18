@@ -12,7 +12,8 @@ const Home = () => {
     return (
         <>
             <Navbar />
-
+            <div className="bg-[url('./assets/images/png/frame.png')] bg-contain bg-no-repeat bg-center relative">
+            {/* <div className="absolute top-0 start-0 w-full h-full bg-black opacity-20"></div> */}
             {/* Hero Section Start */}
             <div className="container mx-auto">
                 <div className=" hidden lg:flex items-center justify-center py-4 px-24 mt-14 ">
@@ -56,7 +57,7 @@ const Home = () => {
 
 
             {/* Paragraph */}
-            <div className='conatiner mx-auto flex justify-center items-center text-center px-10 sm:px-14 lg:px-28 mt-24'>
+            <div className='container mx-auto flex justify-center items-center text-center px-10 sm:px-14 lg:px-28 mt-24'>
                 <p className='text-3xl md:text-5xl '>
                     Lorem ipsum dolor sit amet consectetur. Elit enim eu rhoncus ultricies.
                     Morbi felis magna purus sit nullam eu dictumst convallis nibh.
@@ -65,21 +66,24 @@ const Home = () => {
             </div>
 
             {/* Book Cover */}
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center mt-20  ">
-                {/* Left: Image */}
-                <img src={bookCover} alt="bookCover" className="h-[500px] md:h-[700px] " />
-                {/* Right: Text */}
-                <div className="max-w-[500px] flex flex-col items-center lg:items-start px-5 sm:px-10  md:px-0  ">
-                    <h2 className="text-4xl md:text-7xl ">Book Title Goes Here</h2>
-                    <p className="mt-10 text-center lg:text-start font-noto text-md md:text-lg ">
-                        Lorem ipsum dolor sit amet consectetur. Lacinia etiam elementum
-                        senectus ac integer. Elit nisi platea aliquet viverra.
-                    </p>
-                    <div className="mt-10">
-                        <Button label="Purchase Now" />
+            <div className="container mx-auto mt-32">
+                <div className="flex flex-col lg:flex-row items-center gap-x-24">
+                    <div className="w-full lg:w-6/12">
+                        <img src={bookCover} alt="bookCover" className="h-full w-full shrink-0 object-contain" />
+                    </div>
+                    <div className="w-full lg:w-6/12">
+                        <h2 className="text-4xl md:text-7xl ">Book Title Goes Here</h2>
+                        <p className="mt-10 text-center lg:text-start font-noto text-md md:text-lg ">
+                            Lorem ipsum dolor sit amet consectetur. Lacinia etiam elementum
+                            senectus ac integer. Elit nisi platea aliquet viverra.
+                        </p>
+                        <div className="mt-10">
+                            <Button label="Purchase Now" />
+                        </div>
                     </div>
                 </div>
             </div>
+
 
             {/*More Books  */}
             <div className='container mx-auto flex flex-col justify-center items-center mt-10 text-center'>
@@ -91,12 +95,12 @@ const Home = () => {
             </div>
             {/* Book Carousel */}
             <Carousel />
-
-            {/* Explore Start */}
-            <div className='flex flex-col justify-center items-center text-center mt-36'>
-                <h3 className='text-6xl  md:text-8xl  max-w-[450px]'>Eplore  Calyn Smart</h3>
-                <img src={explore} alt="explore" className='h-72 md:h-96  mt-14' />
             </div>
+            {/* Explore Start */}
+                <div className="container mx-auto flex flex-col justify-center items-center text-center mt-36">
+                    <h3 className='text-6xl  md:text-8xl  max-w-[450px]'>Eplore  Calyn Smart</h3>
+                    <img src={explore} alt="explore" className='h-full w-full  mt-14' />
+                </div>
             {/* Explore End */}
 
             {/*  */}

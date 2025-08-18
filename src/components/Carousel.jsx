@@ -32,21 +32,21 @@ const Carousel = () => {
   return (
     <>
         {/*Books carousel  */}
-            <div className="container mx-auto overflow-x-auto">
+            <div className="container mx-auto overflow-x-auto mt-10">
             {/* Horizontal scroll with snap */}
-            <div className="flex gap-6 snap-x snap-mandatory overflow-x-scroll scrollbar-hide">
+            <div className="flex gap-8 snap-x snap-mandatory overflow-x-scroll scrollbar-hide">
                 {books.map((b) => (
                 <div
                     key={b.id}
                     className="
-                    flex-shrink-0 snap-center flex flex-col justify-center items-center text-center
+                    flex-shrink-0 snap-center flex flex-col gap-5  justify-center items-center text-center
                     min-w-[80%] sm:min-w-[45%] md:min-w-[30%] lg:min-w-[22%]
                     "
                 >
-                    <img src={b.image} alt={b.title} className="h-80" />
+                    <img src={b.image} alt={b.title} className="h-full w-52 object-contain" />
                     <h3 className="text-4xl">{b.title}</h3>
-                    <p className="text-md  mt-7 font-noto">{b.description}</p>
-                    <div className="mt-7">
+                    <p className="text-md font-noto">{b.description}</p>
+                    <div className="">
                         <Button label="Purchase Now" />
                     </div>
                 </div>
