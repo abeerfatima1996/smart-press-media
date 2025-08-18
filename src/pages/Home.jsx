@@ -109,14 +109,14 @@ const Home = () => {
             <Carousel />
             </div>
             {/* Explore Start */}
-                <div className="container mx-auto flex flex-col justify-center items-center text-center mt-36">
+                <div className="container mx-auto flex flex-col justify-center items-center text-center mt-24">
                     <h3 className='text-6xl  md:text-8xl  max-w-[450px]'>Eplore  Calyn Smart</h3>
                     <img src={explore} alt="explore" className='h-full w-full  mt-14' />
                 </div>
             {/* Explore End */}
 
             {/*  */}
-            <div className='flex flex-col justify-center items-center text-center mt-24 px-5'>
+            <div className='flex flex-col justify-center items-center text-center mt-16 px-5'>
                 <h3 className='text-4xl md:text-6xl max-w-[700px]'>Lorem ipsum dolor sit amet consectetur.</h3>
                 <p className='text-md md:text-lg font-noto max-w-[550px] mt-7'>Lorem ipsum dolor sit amet consectetur. Elit enim eu rhoncus ultricies.
                     Morbi felis magna purus sit nullam eu dictumst convallis nibh.

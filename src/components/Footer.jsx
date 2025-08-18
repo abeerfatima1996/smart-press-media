@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <>
-       <div className="footer mt-40 container mx-auto px-6 sm:px-10">
+       <div className="footer mt-28 container mx-auto px-6 sm:px-10">
             {/* Heading */}
             <div className="flex flex-col justify-center items-center text-center">
                 <h2 className="text-6xl sm:text-6xl lg:text-8xl  leading-tight">
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex flex-col lg:flex-row justify-between mt-20 lg:mt-36 gap-12">
+            <div className="flex flex-col lg:flex-row justify-between lg:mt-28 gap-12">
                 {/* Left Section */}
                 <div className="lg:max-w-md">
                 <p className="text-md sm:text-lg lg:text-xl font-noto leading-relaxed">
