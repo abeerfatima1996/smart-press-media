@@ -32,9 +32,9 @@ const Carousel = () => {
   return (
     <>
         {/*Books carousel  */}
-            <div className="container mx-auto overflow-x-auto mt-10">
+            <div className="container mx-auto  overflow-x-auto mt-10 px-5">
             {/* Horizontal scroll with snap */}
-            <div className="flex gap-8 snap-x snap-mandatory overflow-x-scroll scrollbar-hide">
+            <div className="flex gap-6 snap-x snap-mandatory overflow-x-scroll scrollbar-hide">
                 {books.map((b) => (
                 <div
                     key={b.id}

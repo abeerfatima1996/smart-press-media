@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex items-center gap-8">
           <ul className="hidden lg:flex gap-14 text-xl">
             <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">Author</li>
+            <li className="cursor-pointer">Authors</li>
             <li className="cursor-pointer">Books</li>
             <li className="cursor-pointer">Reviews</li>
           </ul>

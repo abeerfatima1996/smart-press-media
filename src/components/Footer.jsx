@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="flex flex-col lg:flex-row justify-between mt-20 lg:mt-36 gap-12">
                 {/* Left Section */}
                 <div className="lg:max-w-md">
-                <p className="text-base sm:text-lg lg:text-xl font-noto leading-relaxed">
+                <p className="text-md sm:text-lg lg:text-xl font-noto leading-relaxed">
                     Ready to collaborate with Calyn Smart, invite her to speak,
                     or have a media inquiry? Let’s connect and take the next step together.
                 </p>
@@ -74,7 +74,7 @@ const Footer = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Your Message*"
-                    rows="4"
+                    rows="3"
                     className="font-noto text-base sm:text-md w-full border-b-4 border-white bg-transparent focus:border-black focus:outline-none py-3 resize-none"
                     ></textarea>
 
@@ -91,7 +91,7 @@ const Footer = () => {
                 <p className="text-base sm:text-lg lg:text-xl">
                 2025 © Calyn Smart. All rights reserved.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-base sm:text-lg">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 text-base sm:text-lg">
                 <p>Terms & Condition</p>
                 <p>Refund Policy</p>
                 <p>Privacy Policy</p>
