@@ -13,12 +13,12 @@ import MaximillionSmart from './pages/Authors/MaximillionSmart.jsx'
       path:'/',
       element:<Layout/>,
       children:[
-        // {
-        //   path:'',
-        //   element:<Home/>
-        // },
         {
           path:'',
+          element:<Home/>
+        },
+        {
+          path:'/auhtors/maximillionsmart',
           element:<MaximillionSmart/>
         }
     ]
