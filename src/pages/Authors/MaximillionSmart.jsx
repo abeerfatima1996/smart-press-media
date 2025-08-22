@@ -12,6 +12,9 @@ import shape2 from '../../assets/images/png/MS/shape-2.png'
 import shape3 from '../../assets/images/png/MS/shape-3.png'
 import Reviews from '../../components/Reviews'
 import r1 from '../../assets/images/png/MS/r1.png'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Blogs from '../../components/Blogs'
 import blog1 from '../../assets/images/png/MS/blog-1.png'
 import Footer from '../../components/Footer'
@@ -39,12 +42,134 @@ const MaximillionSmart = () => {
     console.log("Form Data:", formData);
   };
 
+   const reviewsData = [
+    {
+      src: r1,
+      name: 'Theo Watson',
+      designation: 'Technical Expert',
+      subject: 'Just listen to him',
+      content: 'Suspendisse egestas lacus ac eros euismod, et bibendum mauris placerat. Maecenas eget mauris venenatis, interdum enim sed.',
+      rating: 4.5,
+    },
+    {
+      src: r1,
+      name: 'Jane Doe',
+      designation: 'Designer',
+      subject: 'Amazing service',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      rating: 5,
+    },
+    {
+      src: r1,
+      name: 'John Smith',
+      designation: 'Developer',
+      subject: 'Highly recommended',
+      content: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+      rating: 4,
+    },
+    {
+      src: r1,
+      name: 'Alice Johnson',
+      designation: 'Manager',
+      subject: 'Great experience',
+      content: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.',
+      rating: 4.7,
+    },
+  ];
+
+  // Slick settings for responsive carousel
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    centerMode: false, // Disable center mode to avoid partial card visibility
+    variableWidth: false, // Ensure fixed width for consistency
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true, // Center card on mobile for better UX
+          centerPadding: '10px',
+        },
+      },
+    ]
+  }
+
+  const blogsData = [
+  {
+    src: blog1,
+    date: "12 Aug, 2025",
+    comments: "03 Comments",
+    title: "Cras posuere euismod turpis, vitae dignissim urna ante",
+    description: "Integevallis arcu sit amet, tempus sem Vlum non maximus nunc."
+  },
+  {
+    src: blog1,
+    date: "15 Aug, 2025",
+    comments: "05 Comments",
+    title: "Suspendisse egestas lacus ac eros euismod",
+    description: "Donec dapibus mauris id odio ornare tempus. Ut eget dapibus nunc."
+  },
+  {
+    src: blog1,
+    date: "20 Aug, 2025",
+    comments: "02 Comments",
+    title: "Integer mollis nulla non sapien scelerisque",
+    description: "Sed ullamcorper ligula sed risus tincidunt, sit amet pulvinar dui egestas."
+  },
+  {
+    src: blog1,
+    date: "25 Aug, 2025",
+    comments: "07 Comments",
+    title: "Fusce nec eros ut erat facilisis volutpat",
+    description: "Cras malesuada dolor sit amet arcu sodales, nec imperdiet ex pretium."
+  },
+];
+const blogSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 1024, // tablet
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 640, // mobile
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "10px",
+      },
+    },
+  ],
+};
+
   return (
     <>
       <Navbar/>
       {/* Hero section start */}
         <div className='container mx-auto bg-gradient-to-b from-[#15202433] via-[#152024] to-[#060B0F]'>
-          <div className='flex flex-col justify-center items-center gap-11 py-36 px-6 '>
+          <div className='flex flex-col justify-center items-center text-white gap-11 py-36 px-6 '>
             <div>
               <img src={heroSec} alt='img' className='h-64 md:h-80 '/>
             </div>
@@ -77,7 +202,7 @@ const MaximillionSmart = () => {
                 Business Trusts,
                 Legal Strategies, And Assets protection
               </h3>
-              <p className='text-md font-noto mt-6 '>
+              <p className='text-md font-noto mt-6  '>
                 This is not a book about secrecy.
                 This is the operating manual for legal sovereignty, dynastic endurance,
                 and strategic invisibility—engineered for the age of algorithmic exposure.
@@ -86,7 +211,7 @@ const MaximillionSmart = () => {
                 advisors, and every operator who refuses to be vulnerable.
                 You are not simply reading a treatise. You are deploying an operating system.
               </p>
-              <h3 className='text-4xl text-[#D1B271] rotate-[-11.087deg] mt-3'>Maximillion</h3>
+              <h3 className='text-4xl text-primary rotate-[-11.087deg] mt-3'>Maximillion</h3>
               <h3 className='text-2xl mt-8'>Maximillion Smart</h3>
               <p className='text-lg mt-2'>Founder</p>
           </div>
@@ -99,9 +224,9 @@ const MaximillionSmart = () => {
               <p className='text-md font-noto '>This is the operating manual for legal sovereignty, dynastic endurance, 
                 and strategic invisibility—engineered for the age of algorithmic exposure.</p>
             </div> 
-             <div className='flex items-center ms-8  gap-4 '>
+             <div className='flex items-center ms-9  gap-4 '>
               <img src={shape2} alt='shape 2' className='h-16'/>
-              <p className='text-md font-noto max-w-[800px]'>Every page is designed to outlast change, 
+              <p className='text-md font-noto max-w-[500px]'>Every page is designed to outlast change, 
                 defeat litigation,and perpetuate control.</p>
             </div> 
              <div className='flex items-center gap-5'>
@@ -116,50 +241,60 @@ const MaximillionSmart = () => {
       {/* The veil end */}
 
       {/* More books Start */}
-        <div className='container mx-auto bg-gradient-to-b  from-[#15202433] via-[#152024] to-[#060B0F]'>
+        <div className='container mx-auto bg-gradient-to-b text-white  from-[#15202433] via-[#152024] to-[#060B0F]'>
           <div className='flex justify-center pt-24'>
-            <p className='text-5xl'>More book by Maximillion Smart</p>
+            <p className='text-5xl '>More book by Maximillion Smart</p>
           </div>
           <div className='flex justify-center  gap-10 p-20'>    
               <div className='flex flex-col gap-10 text-center px-28 py-10 border-r-2'>
                   <img src={veil} alt="book 1" />
-                  <p>The Veil</p>
+                  <p className='text-2xl font-noto'>The Veil</p>
               </div>
               <div className='flex flex-col gap-10 text-center px-28 py-10 '>
                 <img src={code} alt="book 2" />
-                <p>Code And Concrete</p>
+                <p className='text-2xl font-noto'>Code And Concrete</p>
               </div>
           </div>
-          <div className='flex justify-around '>
-            <div className='relative inline-block'>
-              <h2 className='text-7xl text-[#D1B271] opacity-30 relative'>15K</h2>
-               <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                bg-[#FFFFFF99] text-sm text-black px-7 tracking-wider uppercase ">
+          
+          <div className="flex flex-wrap justify-around gap-4 p-4">
+            {/* Stat 1 */}
+            <div className="relative inline-block text-center">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">15K</h2>
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+               bg-gray text-xs sm:text-sm text-black px-4 sm:px-6  
+               tracking-wider uppercase whitespace-nowrap">
                 Transformations
               </span>
             </div>
-             <div className='relative inline-block'>
-              <h2 className='text-7xl text-[#D1B271] opacity-30 relative'>96%</h2>
-               <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                bg-[#FFFFFF99] text-sm text-black px-7 tracking-wider uppercase ">
+            {/* Stat 2 */}
+            <div className="relative inline-block text-center">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">96%</h2>
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+              bg-gray text-xs sm:text-sm text-black px-4 sm:px-6  
+              tracking-wider uppercase whitespace-nowrap">
                 Progress Tracking
               </span>
             </div>
-             <div className='relative inline-block'>
-              <h2 className='text-7xl text-[#D1B271] opacity-30 relative'>8m</h2>
-               <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                bg-[#FFFFFF99] text-sm text-black px-7 tracking-wider uppercase ">
+            {/* Stat 3 */}
+            <div className="relative inline-block text-center">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">8M</h2>
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+              bg-gray text-xs sm:text-sm text-black px-4 sm:px-6  
+              tracking-wider uppercase whitespace-nowrap">
                 Workshops
               </span>
             </div>
-             <div className='relative inline-block'>
-              <h2 className='text-7xl text-[#D1B271] opacity-30 relative'>4.7</h2>
-               <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                bg-[#FFFFFF99] text-sm text-black px-7 tracking-wider uppercase ">
-                client reviews
+            {/* Stat 4 */}
+            <div className="relative inline-block text-center">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">4.7</h2>
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+               bg-gray text-xs sm:text-sm text-black px-4 sm:px-6 
+               tracking-wider uppercase whitespace-nowrap">
+                Client Reviews
               </span>
             </div>
           </div>
+
 
         </div>
       {/* More books end */}
@@ -167,12 +302,12 @@ const MaximillionSmart = () => {
       {/* Contact Now start */}
         <div className='flex flex-col gap-12 justify-center bg-white text-black py-28'>
           <div className='flex flex-col text-center '>
-            <p className='text-[#D1B271] opacity-70 text-7xl'>Contact Now</p>
+            <p className='text-primary opacity-70 text-7xl'>Contact Now</p>
             <h3 className='text-3xl font-noto'>Book Your Consultation</h3>
           </div>
           <div className=''>
           <div className="max-w-4xl mx-auto p-6">
-            <form onSubmit={handleSubmit} className="space-y-8 text-[#000000B2]">
+            <form onSubmit={handleSubmit} className="space-y-8 text-gray">
               {/* Row 1 */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <input
@@ -244,7 +379,7 @@ const MaximillionSmart = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[#D1B271] text-black  hover:bg-[#D1B275] transition"
+                  className="w-full py-3 bg-primary font-noto text-black  hover:bg-[#D1B275] transition"
                 >
                   Submit Now
                 </button>
@@ -256,56 +391,47 @@ const MaximillionSmart = () => {
       {/* Contact now end */}
 
       {/* Reviews Start */}
-        <div className="container mx-auto px-20 py-10 relative bg-[url('./assets/images/png/MS/bgreview.png')] opacity-90">
-        <div className='bg-gradient-to-b from-[#15202433] via-[#152024] to-[#060B0F] '></div>
-          <div className='flex  justify-between py-10  '>
-            <h3 className='text-4xl'>What They Say</h3>
-            <p className='font-noto max-w-[400px] border-t border-[#FFFFFF63] py-6'>Nulla maximus lobortis sapien quis finibus. In orci elit,
-              laoreet eu nunc ac, ultrices tempus sapien. </p>
-          </div>
-          {/* Review Cards */}
-          <div className='flex gap-7 '>
-            <Reviews src={r1} name="Theo Watson" desigination="Technical Expert" 
-            subject="just listen to him"
-            content="Suspendisse egestas lacus ac eros euismod, 
-            et bibendum mauris placerat. Maecenas eget mauris
-              venenatis, interdum enim sed." />
-               <Reviews src={r1} name="Theo Watson" desigination="Technical Expert" 
-            subject="just listen to him"
-            content="Suspendisse egestas lacus ac eros euismod, 
-            et bibendum mauris placerat. Maecenas eget mauris
-              venenatis, interdum enim sed." />
-               <Reviews src={r1} name="Theo Watson" desigination="Technical Expert" 
-            subject="just listen to him"
-            content="Suspendisse egestas lacus ac eros euismod, 
-            et bibendum mauris placerat. Maecenas eget mauris
-              venenatis, interdum enim sed." />
-               <Reviews src={r1} name="Theo Watson" desigination="Technical Expert" 
-            subject="just listen to him"
-            content="Suspendisse egestas lacus ac eros euismod, 
-            et bibendum mauris placerat. Maecenas eget mauris
-              venenatis, interdum enim sed." />
-            </div>
+        <div className="container mx-auto px-4 md:px-16 lg:px-24 py-10 relative bg-[url('./assets/images/png/MS/bgreview.png')] bg-cover bg-center">
+  <div className="flex flex-col lg:flex-row justify-between text-white gap-6">
+    <h3 className="text-3xl md:text-5xl">What They Say</h3>
+    <p className="font-noto max-w-[400px] border-t border-[#FFFFFF63] pt-4 md:pt-6 text-sm md:text-base">
+      Nulla maximus lobortis sapien quis finibus. In orci elit,
+      laoreet eu nunc ac, ultrices tempus sapien.
+    </p>
+  </div>
+
+  {/* Review Cards */}
+  <div className="container mx-auto py-10 px-2 sm:px-6">
+    <Slider {...settings}>
+      {reviewsData.map((review, index) => (
+        <div key={index} className="px-2">
+          <Reviews {...review} />
+        </div>
+      ))}
+    </Slider>
+  </div>
         </div>
       {/* Reviews End */}
 
       {/* Blogs Start */}
-      <div className='container mx-auto bg-white px-5 py-10'>
-        <h3 className='text-6xl text-black'>Our Blogs</h3>
-        <p className='text-md text-[#000000B2] font-noto mt-3'>Orci varius natoque penatibus et magnis dis parturient monteslus mus.</p>
-        {/* Blogs Card */}
-        <div className='flex gap-8 text-black mt-10'>
-          <Blogs src={blog1} date="12 Aug, 2025" comments="03 Comments" title="Cras posuere euismod turpis, vitae dignissim urna ante"
-          description="Integevallis arcu sit amet, tempus sem Vlum non maximus nunc."  />
-          <Blogs src={blog1} date="12 Aug, 2025" comments="03 Comments" title="Cras posuere euismod turpis, vitae dignissim urna ante"
-          description="Integevallis arcu sit amet, tempus sem Vlum non maximus nunc."  />
-          <Blogs src={blog1} date="12 Aug, 2025" comments="03 Comments" title="Cras posuere euismod turpis, vitae dignissim urna ante"
-          description="Integevallis arcu sit amet, tempus sem Vlum non maximus nunc."  />
-        </div>
-
+      <div className="container mx-auto bg-white px-5 py-10">
+        <h3 className="text-4xl md:text-6xl text-black">Our Blogs</h3>
+        <p className="text-sm md:text-md text-[#000000B2] font-noto mt-3 max-w-[500px]">
+          Orci varius natoque penatibus et magnis dis parturient monteslus mus.
+        </p>
+        {/* Blog Carousel */}
+            <div className="mt-10">
+              <Slider {...blogSettings}>
+                {blogsData.map((blog, index) => (
+                  <div key={index} className="px-3">
+                    <Blogs {...blog} />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          
+        {/* Blogs End */}
       </div>
-      {/* Blogs End */}
-
       <Footer/>
         
     </>

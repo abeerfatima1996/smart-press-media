@@ -1,4 +1,6 @@
 body{
   font-family: jaguar;
+  background-color: transparent;
+  outline: 1px solid red;
 }
 

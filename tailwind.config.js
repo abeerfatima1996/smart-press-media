@@ -10,6 +10,10 @@ export default {
         jaguar: ['Jaguar', 'sans-serif'],
         noto: ['"Noto Sans"', 'sans-serif'],
       },
+      colors:{
+        primary: '#D1B271',
+        gray: '#FFFFFF99'
+      }  
     },
   },
   plugins: [],
