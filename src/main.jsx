@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
+import MaximillionSmart from './pages/Authors/MaximillionSmart.jsx'
 
 
   const router=createBrowserRouter([
@@ -12,10 +13,15 @@ import Home from './pages/Home.jsx'
       path:'/',
       element:<Layout/>,
       children:[
+        // {
+        //   path:'',
+        //   element:<Home/>
+        // },
         {
           path:'',
-          element:<Home/>
-      }]
+          element:<MaximillionSmart/>
+        }
+    ]
 
     }
   ])
