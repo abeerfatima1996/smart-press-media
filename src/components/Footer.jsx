@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <>
-       <div className="footer mt-28 container mx-auto px-6 sm:px-10">
+       <div className="footer mt-20 container mx-auto px-6 sm:px-10">
             {/* Heading */}
             <div className="flex flex-col justify-center items-center text-center">
                 <h2 className="text-6xl sm:text-6xl lg:text-8xl  leading-tight">
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex flex-col lg:flex-row justify-between lg:mt-28 gap-12">
+            <div className="flex flex-col lg:flex-row justify-between lg:mt-24 gap-12">
                 {/* Left Section */}
                 <div className="lg:max-w-md">
                 <p className="text-md sm:text-lg lg:text-xl font-noto leading-relaxed">
@@ -57,7 +57,7 @@ const Footer = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your Name*"
-                    className="font-noto text-base sm:text-md w-full border-b-4 border-white bg-transparent focus:border-black focus:outline-none py-3"
+                    className="font-noto text-base sm:text-md w-full border-b-2 border-white bg-transparent  focus:outline-none py-3"
                     />
 
                     {/* Email */}
@@ -66,7 +66,7 @@ const Footer = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your Email*"
-                    className="font-noto text-base sm:text-md w-full border-b-4 border-white bg-transparent focus:border-black focus:outline-none py-3"
+                    className="font-noto text-base sm:text-md w-full border-b-2 border-white bg-transparent focus:outline-none py-3"
                     />
 
                     {/* Message */}
@@ -75,7 +75,7 @@ const Footer = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Your Message*"
                     rows="3"
-                    className="font-noto text-base sm:text-md w-full border-b-4 border-white bg-transparent focus:border-black focus:outline-none py-3 resize-none"
+                    className="font-noto text-base sm:text-md w-full border-b-2 border-white bg-transparent  focus:outline-none py-3 resize-none"
                     ></textarea>
 
                     {/* Submit Button */}
@@ -87,7 +87,8 @@ const Footer = () => {
             </div>
 
             {/* Bottom Footer */}
-            <div className="flex flex-col sm:flex-row justify-between items-center border rounded border-white px-6 sm:px-10 py-5 mt-20 lg:mt-36 mb-5 gap-4 sm:gap-0 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row justify-between items-center border rounded border-white
+             px-6 sm:px-10 py-5 mt-12 lg:mt-28   gap-4 sm:gap-0 text-center sm:text-left">
                 <p className="text-base sm:text-lg lg:text-xl">
                 2025 © Calyn Smart. All rights reserved.
                 </p>

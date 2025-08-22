@@ -70,8 +70,8 @@ const MaximillionSmart = () => {
       {/* Hero section End */}
 
       {/* The veil start */}
-        <div className='container mx-auto bg-white text-black py-20 px-10'>
-          <div className='flex flex-col gap-4 lg:flex-row'>
+        <div className='container mx-auto bg-white text-black py-20 px-14'>
+          <div className='flex flex-col gap-10 lg:flex-row'>
             <div className='w-full lg:w-4/12'>
               <h3 className='text-5xl'>
                 Business Trusts,
@@ -91,15 +91,15 @@ const MaximillionSmart = () => {
               <p className='text-lg mt-2'>Founder</p>
           </div>
           <div className=' w-full lg:w-4/12'>
-            <img src={theVeil} alt='book' className=''/>
+            <img src={theVeil} alt='book' className='h-full object-contain'/>
           </div>
-          <div className='flex flex-col justify-center items-center gap-20  w-full lg:w-4/12'>
-            <div className='flex  items-center gap-5 '>
+          <div className='w-full lg:w-4/12 flex flex-col justify-center  items-center gap-20  '>
+            <div className='flex  items-center gap-4 '>
               <img src={shape1} alt='shape 1' className='h-16'/>
               <p className='text-md font-noto '>This is the operating manual for legal sovereignty, dynastic endurance, 
                 and strategic invisibility—engineered for the age of algorithmic exposure.</p>
             </div> 
-             <div className='flex items-center gap-5 '>
+             <div className='flex items-center ms-8  gap-4 '>
               <img src={shape2} alt='shape 2' className='h-16'/>
               <p className='text-md font-noto max-w-[800px]'>Every page is designed to outlast change, 
                 defeat litigation,and perpetuate control.</p>
@@ -116,16 +116,16 @@ const MaximillionSmart = () => {
       {/* The veil end */}
 
       {/* More books Start */}
-        <div className='container mx-auto bg-gradient-to-b from-[#15202433] via-[#152024] to-[#060B0F]'>
+        <div className='container mx-auto bg-gradient-to-b  from-[#15202433] via-[#152024] to-[#060B0F]'>
           <div className='flex justify-center pt-24'>
             <p className='text-5xl'>More book by Maximillion Smart</p>
           </div>
           <div className='flex justify-center  gap-10 p-20'>    
-              <div className='flex flex-col gap-10 text-center border-r-2'>
+              <div className='flex flex-col gap-10 text-center px-28 py-10 border-r-2'>
                   <img src={veil} alt="book 1" />
                   <p>The Veil</p>
               </div>
-              <div className='flex flex-col gap-10 text-center self-end'>
+              <div className='flex flex-col gap-10 text-center px-28 py-10 '>
                 <img src={code} alt="book 2" />
                 <p>Code And Concrete</p>
               </div>

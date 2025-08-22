@@ -1,5 +1,10 @@
 import React from 'react'
 import book from '../assets/images/png/cover-1.png'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import Button from './Button';
 
 const Carousel = () => {
@@ -31,28 +36,69 @@ const Carousel = () => {
         ];
   return (
     <>
-        {/*Books carousel  */}
-            <div className="container mx-auto  overflow-x-auto mt-10 px-[10%] sm:px-[5%] ">
-            {/* Horizontal scroll with snap */}
-            <div className="flex gap-6 snap-x snap-mandatory overflow-x-scroll scrollbar-hide">
-                {books.map((b) => (
-                <div
-                    key={b.id}
-                    className="
-                    flex-shrink-0 snap-center flex flex-col gap-5  justify-center items-center text-center
-                    min-w-[80%] sm:min-w-[45%] md:min-w-[30%] lg:min-w-[22%]
-                    "
-                >
-                    <img src={b.image} alt={b.title} className="h-full w-52 object-contain" />
-                    <h3 className="text-4xl">{b.title}</h3>
-                    <p className="text-md font-noto text-center max-w-80 md:max-w-96">{b.description}</p>
-                    <div className="">
-                        <Button label="Purchase Now" />
-                    </div>
+       <div className="container mx-auto mt-10 px-4 sm:px-6 lg:px-12">
+      <Swiper 
+        modules={[Navigation, Pagination]}
+        spaceBetween={24}
+        slidesPerView={1}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+          },
+        }}
+        className="mySwiper"
+      >
+        <div className="swiper-wrapper">
+          {books.map((b) => (
+            <SwiperSlide key={b.id}>
+              <div
+                className="
+                  flex flex-col gap-5 justify-center items-center text-center
+                  min-w-[80%] sm:min-w-[45%] md:min-w-[30%] lg:min-w-[22%]
+                  mx-auto
+                "
+              >
+                <img src={b.image} alt={b.title} className="h-96 w-52 object-contain" />
+                <h3 className="text-4xl">{b.title}</h3>
+                <p className="text-md font-noto text-center max-w-80 md:max-w-96">{b.description}</p>
+                <div>
+                  <Button label="Purchase Now" />
                 </div>
-                ))}
-            </div>
-            </div> 
+              </div>
+            </SwiperSlide>
+          ))}
+        </div>
+        {/* Navigation Buttons */}
+        <div
+          className="
+            swiper-button-prev !left-8 sm:!left-4 lg:!left-1
+             !text-white !
+            !flex !items-center !justify-center !p-0
+          "
+        ></div>
+        <div
+          className="
+            swiper-button-next !right-2 sm:!right-4 lg:!right-1
+            !w-10 !h-10  !text-white 
+            !flex !items-center !justify-center !p-0
+          "
+        ></div>
+      </Swiper>
+    </div>
     </>
   )
 }
