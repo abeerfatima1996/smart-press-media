@@ -37,7 +37,7 @@ const Home = () => {
                 {/* Hero Section End */}
 
                 {/* Mobile Hero Section Start */}
-                <div className="container mx-auto  lg:hidden flex flex-col items-center justify-center py-4 px-5  ">
+                <div className="container mx-auto  lg:hidden flex flex-col items-center justify-center px-5  ">
                     {/* Left Section */}
                     <div className="text-center md:text-left">
                         <h1 className="text-9xl sm:text-9xl leading-none mb-8 ">Calyn</h1>
@@ -109,14 +109,14 @@ const Home = () => {
                     <Carousel />
                 </div>
                 {/* Explore Start */}
-                    <div className="container mx-auto flex flex-col justify-center items-center text-center mt-12 md:mt-20">
+                    <div className="container mx-auto flex flex-col justify-center items-center text-center mt-8 md:mt-20">
                         <h3 className='text-6xl  md:text-8xl  max-w-[450px]'>Eplore  Calyn Smart</h3>
-                        <img src={explore} alt="explore" className='h-full w-full  mt-10' />
+                        <img src={explore} alt="explore" className='h-full w-full  mt-6 sm:mt-10' />
                     </div>
                 {/* Explore End */}
 
                 {/*  */}
-                <div className='flex flex-col justify-center items-center text-center mt-14 px-5'>
+                <div className='flex flex-col justify-center items-center text-center mt-6 sm:mt-14 px-5'>
                     <h3 className='text-4xl md:text-6xl max-w-[700px]'>Lorem ipsum dolor sit amet consectetur.</h3>
                     <p className='text-md md:text-lg font-noto max-w-[550px] mt-5'>Lorem ipsum dolor sit amet consectetur. Elit enim eu rhoncus ultricies.
                         Morbi felis magna purus sit nullam eu dictumst convallis nibh.

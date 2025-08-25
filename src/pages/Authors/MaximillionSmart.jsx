@@ -12,12 +12,17 @@ import shape2 from '../../assets/images/png/MS/shape-2.png'
 import shape3 from '../../assets/images/png/MS/shape-3.png'
 import Reviews from '../../components/Reviews'
 import r1 from '../../assets/images/png/MS/r1.png'
+import r2 from '../../assets/images/png/MS/r2.png'
+import r3 from '../../assets/images/png/MS/r3.png'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Blogs from '../../components/Blogs'
 import blog1 from '../../assets/images/png/MS/blog-1.png'
+import blog2 from '../../assets/images/png/MS/blog-2.png'
+import blog3 from '../../assets/images/png/MS/blog-3.png'
 import Footer from '../../components/Footer'
+
 
 const MaximillionSmart = () => {
    const [formData, setFormData] = useState({
@@ -52,7 +57,7 @@ const MaximillionSmart = () => {
       rating: 4.5,
     },
     {
-      src: r1,
+      src: r2,
       name: 'Jane Doe',
       designation: 'Designer',
       subject: 'Amazing service',
@@ -60,7 +65,7 @@ const MaximillionSmart = () => {
       rating: 5,
     },
     {
-      src: r1,
+      src: r3,
       name: 'John Smith',
       designation: 'Developer',
       subject: 'Highly recommended',
@@ -116,14 +121,14 @@ const MaximillionSmart = () => {
     description: "Integevallis arcu sit amet, tempus sem Vlum non maximus nunc."
   },
   {
-    src: blog1,
+    src: blog2,
     date: "15 Aug, 2025",
     comments: "05 Comments",
     title: "Suspendisse egestas lacus ac eros euismod",
     description: "Donec dapibus mauris id odio ornare tempus. Ut eget dapibus nunc."
   },
   {
-    src: blog1,
+    src: blog3,
     date: "20 Aug, 2025",
     comments: "02 Comments",
     title: "Integer mollis nulla non sapien scelerisque",
@@ -169,11 +174,11 @@ const blogSettings = {
       <Navbar/>
       {/* Hero section start */}
         <div className='container mx-auto bg-gradient-to-b from-[#15202433] via-[#152024] to-[#060B0F]'>
-          <div className='flex flex-col justify-center items-center text-white gap-11 py-36 px-6 '>
+          <div className='flex flex-col justify-center items-center text-white gap-11 py-12 md:py-24 px-6 '>
             <div>
               <img src={heroSec} alt='img' className='h-64 md:h-80 '/>
             </div>
-            <div className='flex flex-col md:flex-row gap-6 md:gap-12 '>
+            <div className='flex flex-col md:flex-row gap-4 md:gap-12 '>
               <div className='flex gap-2'>
                 <img src={icon} alt='icon' className='h-5'/>
                 <p className='text-md'>BUSINESS TRUSTS</p>
@@ -195,7 +200,7 @@ const blogSettings = {
       {/* Hero section End */}
 
       {/* The veil start */}
-        <div className='container mx-auto bg-white text-black py-20 px-14'>
+        <div className='container mx-auto bg-white text-black py-10 md:py-20 px-7 md:px-14'>
           <div className='flex flex-col gap-10 lg:flex-row'>
             <div className='w-full lg:w-4/12'>
               <h3 className='text-5xl'>
@@ -218,7 +223,7 @@ const blogSettings = {
           <div className=' w-full lg:w-4/12'>
             <img src={theVeil} alt='book' className='h-full object-contain'/>
           </div>
-          <div className='w-full lg:w-4/12 flex flex-col justify-center  items-center gap-20  '>
+          <div className='w-full lg:w-4/12 flex flex-col justify-center  items-center gap-10 md:gap-20  '>
             <div className='flex  items-center gap-4 '>
               <img src={shape1} alt='shape 1' className='h-16'/>
               <p className='text-md font-noto '>This is the operating manual for legal sovereignty, dynastic endurance, 
@@ -242,72 +247,93 @@ const blogSettings = {
 
       {/* More books Start */}
         <div className='container mx-auto bg-gradient-to-b text-white  from-[#15202433] via-[#152024] to-[#060B0F]'>
-          <div className='flex justify-center pt-24'>
+          <div className='flex justify-center text-center pt-10 md:pt-20'>
             <p className='text-5xl '>More book by Maximillion Smart</p>
           </div>
-          <div className='flex justify-center  gap-10 p-20'>    
-              <div className='flex flex-col gap-10 text-center px-28 py-10 border-r-2'>
+          <div className='flex flex-col md:flex-row justify-between gap-10 px-20 py-10'>    
+              <div className='flex flex-col gap-8 text-center md:p-3'>
                   <img src={veil} alt="book 1" />
                   <p className='text-2xl font-noto'>The Veil</p>
               </div>
-              <div className='flex flex-col gap-10 text-center px-28 py-10 '>
+              <div className='border border-r-2'>
+
+              </div>
+              <div className='flex flex-col gap-8 text-center md:p-3 '>
                 <img src={code} alt="book 2" />
                 <p className='text-2xl font-noto'>Code And Concrete</p>
               </div>
           </div>
           
-          <div className="flex flex-wrap justify-around gap-4 p-4">
-            {/* Stat 1 */}
-            <div className="relative inline-block text-center">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">15K</h2>
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-               bg-gray text-xs sm:text-sm text-black px-4 sm:px-6  
-               tracking-wider uppercase whitespace-nowrap">
-                Transformations
-              </span>
-            </div>
-            {/* Stat 2 */}
-            <div className="relative inline-block text-center">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">96%</h2>
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-              bg-gray text-xs sm:text-sm text-black px-4 sm:px-6  
-              tracking-wider uppercase whitespace-nowrap">
-                Progress Tracking
-              </span>
-            </div>
-            {/* Stat 3 */}
-            <div className="relative inline-block text-center">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">8M</h2>
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-              bg-gray text-xs sm:text-sm text-black px-4 sm:px-6  
-              tracking-wider uppercase whitespace-nowrap">
-                Workshops
-              </span>
-            </div>
-            {/* Stat 4 */}
-            <div className="relative inline-block text-center">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">4.7</h2>
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-               bg-gray text-xs sm:text-sm text-black px-4 sm:px-6 
-               tracking-wider uppercase whitespace-nowrap">
-                Client Reviews
-              </span>
+          <div className="container mx-auto px-4 py-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+              {/* Stat 1 */}
+              <div className="relative inline-block">
+                <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">
+                  15K
+                </h2>
+                <span
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                  bg-gray text-xs sm:text-sm md:text-base text-black px-3 sm:px-6
+                  tracking-wider uppercase whitespace-nowrap rounded"
+                >
+                  Transformations
+                </span>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="relative inline-block">
+                <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">
+                  96%
+                </h2>
+                <span
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                  bg-gray text-xs sm:text-sm md:text-base text-black px-3 sm:px-6
+                  tracking-wider uppercase whitespace-nowrap rounded"
+                >
+                  Progress Tracking
+                </span>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="relative inline-block">
+                <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">
+                  8M
+                </h2>
+                <span
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                  bg-gray text-xs sm:text-sm md:text-base text-black px-3 sm:px-6
+                  tracking-wider uppercase whitespace-nowrap rounded"
+                >
+                  Workshops
+                </span>
+              </div>
+
+              {/* Stat 4 */}
+              <div className="relative inline-block">
+                <h2 className="text-5xl sm:text-6xl md:text-7xl text-primary opacity-30">
+                  4.7
+                </h2>
+                <span
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                  bg-gray text-xs sm:text-sm md:text-base text-black px-3 sm:px-6
+                  tracking-wider uppercase whitespace-nowrap rounded"
+                >
+                  Client Reviews
+                </span>
+              </div>
             </div>
           </div>
-
-
         </div>
       {/* More books end */}
 
       {/* Contact Now start */}
-        <div className='flex flex-col gap-12 justify-center bg-white text-black py-28'>
+        <div className='flex flex-col gap-12 justify-center bg-white text-black py-12 md:py-16 px-7 '>
           <div className='flex flex-col text-center '>
-            <p className='text-primary opacity-70 text-7xl'>Contact Now</p>
-            <h3 className='text-3xl font-noto'>Book Your Consultation</h3>
+            <p className='text-primary opacity-70 text-5xl md:text-7xl'>Contact Now</p>
+            <h3 className='text-2xl md:text-3xl font-noto'>Book Your Consultation</h3>
           </div>
-          <div className=''>
-          <div className="max-w-4xl mx-auto p-6">
-            <form onSubmit={handleSubmit} className="space-y-8 text-gray">
+          <div className="max-w-8xl sm:mx-12 md:mx-32 ">
+            <form onSubmit={handleSubmit} className="space-y-6 text-gray">
               {/* Row 1 */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <input
@@ -342,7 +368,7 @@ const blogSettings = {
                   name="topic"
                   value={formData.topic}
                   onChange={handleChange}
-                  className="border-b border-black p-2 focus:outline-none bg-transparent"
+                  className="border-b  border-black p-2 focus:outline-none bg-transparent"
                 >
                   <option value="">Select Type of Topic</option>
                   <option value="Design">Design</option>
@@ -387,35 +413,34 @@ const blogSettings = {
             </form>
           </div>
           </div>
-        </div>
       {/* Contact now end */}
 
       {/* Reviews Start */}
-        <div className="container mx-auto px-4 md:px-16 lg:px-24 py-10 relative bg-[url('./assets/images/png/MS/bgreview.png')] bg-cover bg-center">
-  <div className="flex flex-col lg:flex-row justify-between text-white gap-6">
-    <h3 className="text-3xl md:text-5xl">What They Say</h3>
-    <p className="font-noto max-w-[400px] border-t border-[#FFFFFF63] pt-4 md:pt-6 text-sm md:text-base">
-      Nulla maximus lobortis sapien quis finibus. In orci elit,
-      laoreet eu nunc ac, ultrices tempus sapien.
-    </p>
-  </div>
+      <div className="container mx-auto px-4 md:px-16 lg:px-24 py-10 relative bg-[url('./assets/images/png/MS/bgreview.png')] bg-cover bg-center">
+          <div className="flex flex-col lg:flex-row justify-between text-white gap-6">
+            <h3 className="text-3xl md:text-6xl">What They Say</h3>
+            <p className="font-noto max-w-[400px] border-t border-[#FFFFFF63] pt-4 md:pt-6 text-sm md:text-base">
+              Nulla maximus lobortis sapien quis finibus. In orci elit,
+              laoreet eu nunc ac, ultrices tempus sapien.
+            </p>
+          </div>
 
-  {/* Review Cards */}
-  <div className="container mx-auto py-10 px-2 sm:px-6">
-    <Slider {...settings}>
-      {reviewsData.map((review, index) => (
-        <div key={index} className="px-2">
-          <Reviews {...review} />
+      {/* Review Cards */}
+        <div className="container mx-auto py-10 px-2 sm:px-6">
+          <Slider {...settings}>
+            {reviewsData.map((review, index) => (
+              <div key={index} className="px-2">
+                <Reviews {...review} />
+              </div>
+            ))}
+          </Slider>
         </div>
-      ))}
-    </Slider>
-  </div>
-        </div>
+      </div>
       {/* Reviews End */}
 
       {/* Blogs Start */}
       <div className="container mx-auto bg-white px-5 py-10">
-        <h3 className="text-4xl md:text-6xl text-black">Our Blogs</h3>
+        <h3 className="text-3xl md:text-6xl text-black">Our Blogs</h3>
         <p className="text-sm md:text-md text-[#000000B2] font-noto mt-3 max-w-[500px]">
           Orci varius natoque penatibus et magnis dis parturient monteslus mus.
         </p>
