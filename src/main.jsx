@@ -7,6 +7,7 @@ import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
 import MaximillionSmart from './pages/Authors/MaximillionSmart.jsx'
 import SiennaReed from './pages/Authors/SiennaReed.jsx'
+import ARVance from './pages/Authors/ARVance.jsx'
 
 
   const router=createBrowserRouter([
@@ -25,6 +26,10 @@ import SiennaReed from './pages/Authors/SiennaReed.jsx'
         {
           path:'/auhtors/sieenareed',
           element:<SiennaReed/>
+        },
+        {
+          path:'/auhtors/arvance',
+          element:<ARVance/>
         }
     ]
 
