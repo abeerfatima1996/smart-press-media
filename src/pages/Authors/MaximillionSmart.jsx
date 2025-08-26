@@ -22,6 +22,7 @@ import blog1 from '../../assets/images/png/MS/blog-1.png'
 import blog2 from '../../assets/images/png/MS/blog-2.png'
 import blog3 from '../../assets/images/png/MS/blog-3.png'
 import Footer from '../../components/Footer'
+import comment from '../../assets/images/png/MS/comment.svg'
 
 
 const MaximillionSmart = () => {
@@ -173,7 +174,8 @@ const blogSettings = {
     <>
       <Navbar/>
       {/* Hero section start */}
-        <div className='container mx-auto bg-gradient-to-b from-[#15202433] via-[#152024] to-[#060B0F]'>
+      <div className=' bg-gradient-to-b from-[#15202433] via-[#152024] to-[#060B0F]'>
+        <div className='container mx-auto'>
           <div className='flex flex-col justify-center items-center text-white gap-11 py-12 md:py-24 px-6 '>
             <div>
               <img src={heroSec} alt='img' className='h-64 md:h-80 '/>
@@ -197,6 +199,7 @@ const blogSettings = {
             </div>
           </div>
         </div>
+      </div>
       {/* Hero section End */}
 
       {/* The veil start */}
@@ -246,7 +249,8 @@ const blogSettings = {
       {/* The veil end */}
 
       {/* More books Start */}
-        <div className='container mx-auto bg-gradient-to-b text-white  from-[#15202433] via-[#152024] to-[#060B0F]'>
+      <div className='bg-gradient-to-b text-white  from-[#15202433] via-[#152024] to-[#060B0F]'>
+        <div className='container mx-auto'>
           <div className='flex justify-center text-center pt-10 md:pt-20'>
             <p className='text-5xl '>More book by Maximillion Smart</p>
           </div>
@@ -324,6 +328,7 @@ const blogSettings = {
             </div>
           </div>
         </div>
+      </div>
       {/* More books end */}
 
       {/* Contact Now start */}
@@ -416,7 +421,9 @@ const blogSettings = {
       {/* Contact now end */}
 
       {/* Reviews Start */}
-      <div className="container mx-auto px-4 md:px-16 lg:px-24 py-10 relative bg-[url('./assets/images/png/MS/bgreview.png')] bg-cover bg-center">
+      <div className="bg-[url('./assets/images/png/MS/bgreview.png')] bg-cover bg-center">
+
+      <div className="container mx-auto px-4 md:px-16 lg:px-24 py-10 relative ">
           <div className="flex flex-col lg:flex-row justify-between text-white gap-6">
             <h3 className="text-3xl md:text-6xl">What They Say</h3>
             <p className="font-noto max-w-[400px] border-t border-[#FFFFFF63] pt-4 md:pt-6 text-sm md:text-base">
@@ -436,6 +443,7 @@ const blogSettings = {
           </Slider>
         </div>
       </div>
+      </div>
       {/* Reviews End */}
 
       {/* Blogs Start */}
@@ -449,7 +457,7 @@ const blogSettings = {
               <Slider {...blogSettings}>
                 {blogsData.map((blog, index) => (
                   <div key={index} className="px-3">
-                    <Blogs {...blog} />
+                    <Blogs {...blog} commentIcon={comment} />
                   </div>
                 ))}
               </Slider>
@@ -457,8 +465,7 @@ const blogSettings = {
           
         {/* Blogs End */}
       </div>
-      <Footer/>
-        
+      <Footer/> 
     </>
   )
 }

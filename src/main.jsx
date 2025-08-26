@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
 import MaximillionSmart from './pages/Authors/MaximillionSmart.jsx'
+import SiennaReed from './pages/Authors/SiennaReed.jsx'
 
 
   const router=createBrowserRouter([
@@ -20,6 +21,10 @@ import MaximillionSmart from './pages/Authors/MaximillionSmart.jsx'
         {
           path:'/auhtors/maximillionsmart',
           element:<MaximillionSmart/>
+        },
+        {
+          path:'/auhtors/sieenareed',
+          element:<SiennaReed/>
         }
     ]
 

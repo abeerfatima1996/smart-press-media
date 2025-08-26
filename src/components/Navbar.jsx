@@ -10,7 +10,8 @@ const Navbar = () => {
   return (
     <>
       {/* Top bar */}
-      <div className="container mx-auto bg-black text-white grid grid-cols-3 items-center py-10 px-5">
+      <div className='bg-black'>
+        <div className="container mx-auto  text-white grid grid-cols-3 items-center py-10 px-5">
         {/* Left: Menu / Hamburger */}
         <div className="flex items-center gap-8">
           <ul className="hidden lg:flex gap-14 text-xl">
@@ -36,6 +37,7 @@ const Navbar = () => {
         <div className="hidden lg:flex lg:justify-end">
           <Button label="Contact Us" />
         </div>
+      </div>
       </div>
 
       {/* Mobile Menu */}

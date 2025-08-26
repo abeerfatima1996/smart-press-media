@@ -12,7 +12,9 @@ export default {
       },
       colors:{
         primary: '#D1B271',
-        gray: '#FFFFFF99'
+        gray: '#FFFFFF99',
+        secondary:'#282A30',
+        blue:'#417F94'
       }  
     },
   },

@@ -21,7 +21,8 @@ const Footer = () => {
 
   return (
     <>
-       <div className="footer bg-black text-white mt-6  sm:mt-20 container mx-auto p-10 sm:px-10">
+      <div className='bg-black'>
+         <div className="footer  text-white mt-6  sm:mt-20 container mx-auto p-10 sm:px-10">
             {/* Heading */}
             <div className="flex flex-col justify-center items-center text-center">
                 <h2 className="text-6xl sm:text-6xl lg:text-8xl  leading-tight">
@@ -99,6 +100,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
+      </div>
 
     </>
   )
